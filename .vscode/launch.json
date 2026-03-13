@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug MPI (1 process)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/exercise",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "Build MPI"
+    },
+    {
+      "name": "Debug MPI (multiple processes)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/usr/bin/mpiexec",
+      "args": [
+        "-n", "4",
+        "${workspaceFolder}/exercise"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "Build MPI"
+    }
+  ]
+}

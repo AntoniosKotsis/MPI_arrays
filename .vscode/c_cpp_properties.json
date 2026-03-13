@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}",
+
+        // MPICH include paths
+        //"/usr/lib/x86_64-linux-gnu/mpich/include",
+
+        // OpenMPI include paths
+        "/usr/lib/x86_64-linux-gnu/openmpi/include",
+        "/usr/lib/x86_64-linux-gnu/fortran/gfortran-mod-15/openmpi",
+        "/usr/lib/x86_64-linux-gnu/fortran/gfortran-mod-15/openmpi/openmpi/ompi/mpi/fortran/mpif-h"
+
+        // Kernel header versions of mpi.h (just in case)
+        //"/usr/src/linux-hwe-6.14-headers-6.14.0-32/include/linux", // 33
+        //"/usr/src/linux-hwe-6.14-headers-6.14.0-33/include/linux"  // 35
+      ],
+      "defines": [],
+      "compilerPath": "/usr/bin/mpicc",
+      "cStandard": "c11",
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ],
+  "version": 4
+}
